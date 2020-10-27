@@ -1,0 +1,122 @@
+/*==== banner css =====*/
+.banner-area {
+    position: relative;
+    .banner-slider {
+        overflow: hidden;
+        .swiper-wrapper {
+            .swiper-slide {
+                .banner-btn {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    width: 100%;
+                    transform: translate(-50%, 50%);
+                }
+            }
+        }
+        .swiper-pagination {
+            left: 0;
+            @include breakpoint (sm) {
+                left: 35%;
+            }
+        }
+        .banner-button-prev, .banner-button-next {
+            position: absolute;
+            top: 50%;
+            z-index: 2;
+            cursor: pointer;
+            &.swiper-button-disabled {
+                span {
+                    background: #F8DA48;
+                    border-color: #333;
+                }
+            }
+            &:hover {
+                span {
+                    background: $theme-color;
+                }
+                svg {
+                    g {
+                        fill: $white-color;
+                    }
+                }
+            }
+            span {
+                height: 40px;
+                width: 40px;
+                line-height: 40px;
+                text-align: center;
+                background: rgb(255, 255, 255);
+                border: 1px solid $theme-color;
+                border-radius: 100%;
+                display: inline-block;
+                @include transition($transition);
+            }
+        }
+        .banner-button-prev {
+            left: 8%;
+            right: auto;
+            transform: translateY(-50%);
+        }
+        .banner-button-next {
+            right: 8%;
+            left: auto;
+            transform: translateY(-50%);
+        }
+    }
+}
+.swiper-pagination-bullet {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 12px;
+    color:#000;
+    opacity: 1;
+    @extend %shadow;
+    background: rgb(255, 255, 255);
+    @include transition ($transition);
+    &:hover {
+        transform: scale(1.1);
+        background: #F8DA48;
+    }
+    &.swiper-pagination-bullet-active {
+        color:#fff;
+        background: $theme-color;
+    }
+  }
+  
+/*==== banner css =====*/
+
+
+//*=== page header css start ===*//
+.page-header {
+    .page-link {
+        padding: 20px 0;
+        ul {
+            margin: 0;
+            @extend %flex;
+            justify-content: flex-start;
+            align-items: center;
+            li {
+                list-style: none;
+                span {
+                    font-size: 12px;
+                    color: #979797;
+                    padding: 0 5px;
+                    display: inline-block;
+                }
+            }
+            a {
+                color: #979797;
+                font-size: 12px;
+                text-decoration: none;
+                &.active {
+                    font-weight: 500;
+                    color: $theme-color;
+                }
+            }
+        }
+    }
+}
+//*=== page header css start ===*//

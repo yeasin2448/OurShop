@@ -1,0 +1,876 @@
+//#===== header area css ====#//
+header {
+    .header-part {
+        .header-top {
+            background: #303030;
+            display: none;
+            @include breakpoint (lg) {
+                display: block;
+            }
+            .top-item {
+                @extend %flex;
+                justify-content: space-between;
+                align-items: center;
+                .item-left {
+                    ul {
+                        margin: 0;
+                        @extend %flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        li {
+                            list-style: none;
+                            padding-right: 10px;
+                            &:last-child {
+                                padding-right: 0;
+                            }
+                        }
+                        a {
+                            font-size: 12px;
+                            display: flex;
+                            align-items: center;
+                            color: $white-color;
+                            text-decoration: none;
+                            span {
+                                svg {
+                                    margin-right: 5px;
+                                    display: flex;
+                                }
+                            }
+                        }
+                    }
+                }
+                .item-right {
+                    ul {
+                        margin: 0;
+                        @extend %flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        li {
+                            list-style: none;
+                            padding-right: 10px;
+                            &:last-child {
+                                padding-right: 0;
+                            }
+                            &:nth-child(2) {
+                                a.button {
+                                    background: none;
+                                    &:focus {
+                                        box-shadow: none;
+                                    }
+                                    &.active-toggle  {
+                                        box-shadow: none;
+                                    }
+                                    img {
+                                        margin-right: 5px;
+                                    }
+                                }
+                                .drop-relative {
+                                    display: none;
+                                    &.active-container {
+                                        display: block;
+                                    }
+                                    .drop-bg {
+                                        ul {
+                                            position: absolute;
+                                            top: 10px;
+                                            display: block;
+                                            padding: 0;
+                                            margin: 0;
+                                            width: 115px;
+                                            z-index: 9;
+                                            padding: 0px 10px 10px 10px;
+                                            background: #fff;
+                                            border-radius: 3px;
+                                            @extend %shadow;
+                                            li {
+                                                &:first-child {
+                                                    padding-top: 10px;
+                                                }
+                                            }
+                                            a {
+                                                color: #000;
+                                                padding: 5px 0;
+                                                img {
+                                                    padding-right: 10px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            &:nth-child(3) {
+                                .user-relative {
+                                    .menu-content {
+                                            position: absolute;
+                                            top: 20px;
+                                            right: 0;
+                                            z-index: 9;
+                                            background: #fff;
+                                            border-radius: 3px;
+                                            @extend %shadow;
+                                        ul.drop-menu {
+                                            padding: 0;
+                                            margin: 0;
+                                            width: 180px;
+                                            border: 1px solid $theme-color;
+                                            display: block;
+                                            &::before {
+                                                @extend %absolute;
+                                                margin: auto;
+                                                right: calc(50% - 65px);
+                                                width: 12px;
+                                                height: 12px;
+                                                transform: rotate(45deg);
+                                                -webkit-transform: rotate(45deg);
+                                                -moz-transform: rotate(45deg);
+                                                -o-transform: rotate(45deg);
+                                                -ms-transform: rotate(45deg);
+                                                border-left: 1px solid $theme-color;
+                                                border-top: 1px solid $theme-color;
+                                                top: -6px;
+                                                background: #fff;
+                                            }
+                                            li {
+                                                list-style: none;
+                                                padding: 10px;
+                                                border-bottom: 1px solid $border-color;
+                                                &:last-child {
+                                                    border-bottom: none;
+                                                }
+                                                &.active {
+                                                    border-radius: 3px 3px 0;
+                                                    background: #e2e2e2;
+                                                }
+                                            }
+                                            a {
+                                                span {
+                                                    color: #707070;
+                                                    svg {
+                                                        margin-right: 10px;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        a {
+                            font-size: 12px;
+                            display: flex;
+                            align-items: center;
+                            color: $white-color;
+                            text-decoration: none;
+                            span {
+                               svg {
+                                margin-right: 5px;
+                                display: flex;
+                               }
+                            }
+                        }
+                    }
+                }   
+            }
+        }
+        .header-midel {
+            .midel-item {
+                padding: 10px 0;
+                @extend %flex;
+                justify-content: space-between;
+                align-items: center;
+                border-bottom: 1px solid $border-color;
+                .header-logo {
+                    @extend %flex;
+                    justify-content: flex-start;
+                    @include breakpoint (md) {
+                        align-items: center;
+                    }
+                    a {
+                        color: #000;
+                        font-size: 20px;
+                        font-weight: 900;
+                        text-decoration: none;
+                        padding-right: 25px;
+                        @include breakpoint (md) {
+                            font-size: 40px;
+                        }
+                        span {
+                            color: $theme-color;
+                        }
+                        &.before {
+                            display: none;
+                            @include breakpoint (lg) {
+                                display: block;
+                            }
+                        }
+                        &.after {
+                            display: block;
+                            @include breakpoint (lg) {
+                                display: none;
+                            }
+                        }
+                    }
+                    .header-left {
+                       .side-menu  {
+                                .menu-bar {
+                                    a {
+                                        &.bar-btn {
+                                            height: 40px;
+                                            width: 40px;
+                                            line-height: 40px;
+                                            text-align: center;
+                                            border-radius: 100%;
+                                            position: relative;
+                                            &:hover {
+                                                &::before {
+                                                    opacity: 1;
+                                                    -webkit-transform: scale(1);
+                                                    -ms-transform: scale(1);
+                                                    transform: scale(1);
+                                                }
+                                                svg {
+                                                    margin-left: 6px;
+                                                    g {
+                                                        rect {
+                                                            fill: $white-color;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                            &::before {
+                                                @extend %absolute;
+                                                top: 0px;
+                                                left: 0px;
+                                                right: 0px;
+                                                bottom: 0px;
+                                                z-index: -1;
+                                                opacity: 0;
+                                                border-radius: 100%;
+                                                -webkit-transform: scale(0.5);
+                                                -ms-transform: scale(0.5);
+                                                transform: scale(0.5);
+                                                -webkit-transition: all 0.3s ease-in-out;
+                                                -moz-transition: all 03s ease-in-out;
+                                                -o-transition: all 0.3s ease-in-out;
+                                                transition: all 0.3s ease-in-out;
+                                                background-color: $theme-color;
+        
+                                            }
+                                        }
+                                    }
+                                }
+                                .menu-items {
+                                    position: fixed;
+                                    width: 300px;
+                                    height: calc(100vh - 0px);
+                                    left : -300px;
+                                    top: 0;
+                                    padding-left: 20px;
+                                    overflow-y: scroll;
+                                    opacity: 0.9;
+                                    background-color: $white-color;
+                                    @extend %shadow;
+                                    z-index: 999;
+                                    -webkit-transition: all 0.3s ease-in-out;
+                                    -moz-transition: all 0.3s ease-in-out;
+                                    transition: all 0.3s ease-in-out;
+                                    &.active {
+                                        left: 0;
+                                    }
+                                .items-inner {
+                                    position: relative;
+                                    .side-logo {
+                                        padding: 20px 0;
+                                        a {
+                                            font-size: 30px;
+                                        }
+                                    }
+                                    .crose-bar {
+                                        @extend %absolute;
+                                        top: 5px;
+                                        right: 20px; 
+                                        z-index: 1;
+                                    }
+                                    .menu-list {
+                                        ul.list-item {
+                                            padding: 0;
+                                            margin: 0;
+                                            li {
+                                                list-style: none;
+                                                padding: 15px 0;
+                                                border-bottom: 1px solid #424949;
+                                                &:last-child {
+                                                    border-bottom: none;
+                                                }
+                                                &:nth-child(9), &:nth-child(10), &:nth-child(11) {
+                                                    display: block;
+                                                    @include breakpoint (md) {
+                                                        display: none;
+                                                    }
+                                                }
+                                                &.open {
+                                                    a {
+                                                        &.icon-down {
+                                                            &::before {
+                                                                display: none;
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                                ul.m-submenu {
+                                                    display: none;
+                                                    margin: 0;
+                                                    padding: 10px 0 0 10px;
+                                                    position: relative;
+                                                    li {
+                                                        border-bottom: none;
+                                                        padding: 0;
+                                                        padding: 10px 0 10px 10px;
+                                                        position: relative;
+                                                        &::after, &::before {
+                                                            @extend %absolute;
+                                                            top: 0;
+                                                            left: -5px;
+                                                            height: 100%;
+                                                            width: 3px;
+                                                            @include transition ($transition);
+                                                        }
+                                                        &::before {
+                                                            background: $theme-color;
+                                                        }
+                                                        &::after {
+                                                            transform: scale(0);
+                                                            background: #333;
+                                                        }
+                                                        &:hover {
+                                                            border-bottom: 1px solid $border-color;
+                                                            &:last-child {
+                                                                border-bottom: none;
+                                                            }
+                                                            &::after {
+                                                                transform: scale(1.1);
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                            a {
+                                                color: #000;
+                                                font-size: 14px;
+                                                display: block;
+                                                text-decoration: none;
+                                                &.icon-down {
+                                                    position: relative;
+                                                    &::before {
+                                                        @extend %absolute;
+                                                        background: #000;
+                                                        top: 50%;
+                                                        -webkit-transition: all 0.3s ease;
+                                                        -moz-transition: all 0.3s ease;
+                                                        transition: all 0.3s ease;
+                                                        width: 2px;
+                                                        height: 10px;
+                                                        -webkit-transform: translateX(-15px) translateY(-50%);
+                                                        -ms-transform: translateX(-15px) translateY(-50%);
+                                                        transform: translateX(-15px) translateY(-50%);
+                                                        left: calc(100% + -1px);
+                                                    }
+                                                    &::after {
+                                                        @extend %absolute;
+                                                        background: #000;
+                                                        top: 50%;
+                                                        -webkit-transition: all 0.3s ease;
+                                                        -moz-transition: all 0.3s ease;
+                                                        transition: all 0.3s ease;
+                                                        width: 10px;
+                                                        right: 10px;
+                                                        height: 2px;
+                                                        -webkit-transform: translateY(-50%);
+                                                        -ms-transform: translateY(-50%);
+                                                        transform: translateY(-50%);
+                                                    }
+                                                }
+                                                &.active {
+                                                    color: $theme-color;
+                                                    text-decoration: underline;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .overlay {
+                                width: 100vw;
+                                height: 100vh;
+                                left: -100vw;
+                                display: none;
+                                animation: fadeEffect 1s; /* Fading effect takes 1 second */
+                                background: rgba(161, 244, 206, 0.5);
+                                -webkit-transition: all 0.3s ease-in-out;
+                                -moz-transition: all 0.3s ease-in-out;
+                                transition: all 0.3s ease-in-out;
+                                z-index: 111;
+                                &.active {
+                                    left: 0;
+                                    display: block;
+                                }
+                            }
+                       }
+                    }
+                }
+                .search-bar {
+                    width: 35%;
+                    display: none;
+                    @include breakpoint (lg) {
+                        display: block;
+                    }
+                    .d-flex {
+                        input {
+                            height: 40px;
+                            padding-bottom: 5px;
+                            border-radius: 20px 0 0 20px;
+                        }
+                        button {
+                            padding: 5px 25px;
+                            background: $theme-color;
+                            border-radius: 0 20px 20px 0;
+                        }
+                    }
+                }
+                .max-icon {
+                    ul.icon-list {
+                        margin: 0;
+                        @extend %flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        li {
+                            list-style: none;
+                            padding-right: 25px;
+                            &:last-child {
+                                padding-right: 0;
+                                button {
+                                    &::after {
+                                        content: "0";
+                                    }
+                                }
+                            }
+                            &:nth-child(1) {
+                                button {
+                                    &::after {
+                                        content: "07";
+                                    }
+                                }
+                            }
+                            &:nth-child(2) {
+                                button {
+                                    &::after {
+                                        content: "13";
+                                    }
+                                }
+                            }
+                            button {
+                                cursor: pointer;
+                                position: relative;
+                                &::after {
+                                    @extend %absolute;
+                                    top: -5px;
+                                    right: -8px;
+                                    height: 10px;
+                                    width: 10px;
+                                    line-height: 10px;
+                                    color: $white-color;
+                                    font-size: 8px;
+                                    border-radius: 100%;
+                                    background: $theme-color;
+                                    @include breakpoint (md) {
+                                        font-size: 10px;
+                                        height: 20px;
+                                        width: 20px;
+                                        line-height: 20px;
+                                    }
+                                }
+                                span {
+                                    svg {
+                                        @include breakpoint (max-md) {
+                                            height: 20px;
+                                            width: 20px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .overlays {
+                        width: 100vw;
+                        height: 100vh;
+                        right: -100vw;
+                        position: fixed;
+                        top: 0;
+                        display: none;
+                        animation: fadeEffect 1s; /* Fading effect takes 1 second */
+                        background: rgba(161, 244, 206, 0.5);
+                        -webkit-transition: all 0.3s ease-in-out;
+                        -moz-transition: all 0.3s ease-in-out;
+                        transition: all 0.3s ease-in-out;
+                        z-index: 111;
+                        &.active {
+                            right: 0;
+                            display: block;
+                        }
+                    }
+                    .notification {
+                        z-index: 111;
+                        position: fixed;
+                        width: 300px;
+                        height: calc(100vh - 0px);
+                        right : -300px;
+                        top: 0;
+                        overflow-y: scroll;
+                        background-color: $white-color;
+                        transition: all 0.3s ease-in-out;
+                        &.active {
+                            right: 0;
+                        }
+                        .cross-bar {
+                            padding: 20px 0;
+                            span {
+                                &.close-mobile {
+                                    padding-left: 15px;
+                                    display: inline-block;
+                                    svg {
+                                       g {
+                                           fill: $theme-color;
+                                       }
+                                    }
+                                }
+                            }
+                        }
+                        ul.notif-list {
+                            margin: 0;
+                            li {
+                                list-style: none;
+                                padding: 5px 0;
+                                .notif-item {
+                                    margin-left: 20px;
+                                    padding: 15px 0 15px 15px;
+                                    background: $theme-color;
+                                    .item-content {
+                                        width: 100%;
+                                        @extend %flex;
+                                        justify-content: space-between;
+                                        .item-thumb {
+                                            width: 60px; 
+                                        }
+                                        .item-text {
+                                            width: calc(100% - 60px);
+                                            position: relative;
+                                            h6 {
+                                                margin: 0;
+                                                font-size: 14px;
+                                                color: #F8DA48;
+                                                padding-bottom: 5px;
+                                            }
+                                            p {
+                                                font-size: 12px;
+                                                line-height: 1.2;
+                                                color: $white-color;
+                                                margin-bottom: 0;
+                                                span {
+                                                    padding: 0;
+                                                }
+                                            }
+                                            p {
+                                                &.more {
+                                                    display: none;
+                                                    padding: 0 !important;
+                                                    font-size: 12px;
+                                                    font-weight: normal;
+                                                    animation: fadeEffect 1s; /* Fading effect takes 1 second */
+                                                    transition: all 0.5s ease-in-out;
+                                                }
+                                            }
+                                            button {
+                                                padding: 0 5px;
+                                                color: $white-color;
+                                                font-size: 10px;
+                                                font-weight: 500;
+                                                line-height: 1.2;
+                                                cursor: pointer;
+                                                margin-top: 4px;
+                                                margin-right: 10px;
+                                                float: right;
+                                                background: none;
+                                                border: .5px solid $white-color;
+                                                transition: all 0.3s ease-in;
+                                                &:hover {
+                                                    color: $white-color;
+                                                    background: #F8DA48;
+                                                }
+                                            }
+                                            span {
+                                                color: $white-color;
+                                                font-size: 12px;
+                                                font-weight: 700;
+                                                padding-top: 15px;
+                                                display: inline-block; 
+                                            }
+                                        }
+                                    }
+                                }
+                                .item-footer {
+                                    width: 100%;
+                                    @extend %flex;
+                                    justify-content: flex-end;
+                                    padding-right: 8px;
+                                    button {
+                                        z-index: 1;
+                                        width: 40px;
+                                        height: 40px;
+                                        padding: 0;
+                                        cursor: pointer;
+                                        line-height: 40px;
+                                        text-align: center;
+                                        position: relative;
+                                        border-radius: 100%;
+                                        background-color: transparent;
+                                        svg {
+                                            margin-top: 7px;
+                                            .n1 {
+                                                z-index: 1;
+                                                transition: all 0.3s ease-in;
+                                            }
+                                        }
+                                        span{
+                                            color: $white-color;
+                                            position: absolute;
+                                            left: 0;
+                                            opacity: 0;
+                                            font-size: 10px;
+                                            -webkit-transform: translateX(50%);
+                                            -ms-transform: translateX(50%);
+                                            transform: translateX(50%);
+                                            -webkit-transition: all 0.3s ease-in-out;
+                                            -o-transition: all 0.3s ease-in-out;
+                                            transition: all 0.3s ease-in-out;
+                                        }
+                                        &::before {
+                                            @extend %absolute;
+                                            top: 0px;
+                                            left: 0px;
+                                            right: 0px;
+                                            bottom: 0px;
+                                            z-index: -1;
+                                            opacity: 0;
+                                            border-radius: 100%;
+                                            -webkit-transform: scale(0.5);
+                                            -ms-transform: scale(0.5);
+                                            transform: scale(0.5);
+                                            -webkit-transition: all 0.3s ease-in-out;
+                                            -o-transition: all 0.3s ease-in-out;
+                                            transition: all 0.3s ease-in-out;
+                                            background-color: #F8DA48;
+        
+                                        }
+                                        &:hover {
+                                            span {
+                                                opacity: 1;
+                                                left: -50%;
+                                                -webkit-transform: translateX(-50%);
+                                                -ms-transform: translateX(-50%);
+                                                transform: translateX(-50%);
+                                            }
+                                            svg {
+                                                .n1 {
+                                                    fill: #fff;
+                                                }
+                                            }
+                                            &::before {
+                                                opacity: 1;
+                                                -webkit-transform: scale(1);
+                                                -ms-transform: scale(1);
+                                                transform: scale(1);
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .appbar-footer {
+                            .foot-item {
+                                @extend %flex;
+                                justify-content: space-between;
+                                align-content: center;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .header-bottom {
+            display: none;
+            @include breakpoint (lg) {
+                display: block;
+            }
+            .bottom-item {
+                @extend %flex;
+                justify-content: space-between;
+                align-items: center;
+                .vertical-menu {
+                    width: 20%;
+                    position: relative;
+                    button {
+                        width: 100%;
+                        @extend %flex;
+                        justify-content: center;
+                        align-items: center;
+                        background: $theme-color;
+                        span {
+                            color: $white-color;
+                            display: flex;
+                            align-items: center;
+                            svg {
+                                margin-right: 8px;
+                            }
+                        }
+                    }
+                    .drop-relative {
+                        position: absolute;
+                        top: 100%;
+                        left: 0;
+                        width: 100%;
+                        z-index: 9;
+                        background: $white-color;
+                        @extend %shadow;
+                        @include transition($transition);
+                        .drop-bg {
+                            .list-menu {
+                                ul.drop-list {
+                                    margin: 0;
+                                    padding-left: 15px;
+                                    position: relative;
+                                    li {
+                                        list-style: none;
+                                        border-bottom: 1px solid $border-color;
+                                        .mega-menu {
+                                            position: absolute;
+                                            top: -3px;
+                                            left: 100%;
+                                            min-width: 500px;
+                                            height: 506px;
+                                            padding: 20px;
+                                            z-index: 2;
+                                            background: $white-color;
+                                            border-top: 3px solid $theme-color;
+                                            @extend %shadow;
+                                            &::after {
+                                                @extend %absolute;
+                                                bottom: -12%;
+                                                right: 0;
+                                                height: 100%;
+                                                width: 100%;
+                                                background-size: auto;
+                                                background-repeat: no-repeat;
+                                                background-position: left;
+                                                background-image: url(../../assets/images/header/01.png);
+                                            }
+                                            .menu-inner {
+                                                display: flex;
+                                                justify-content: flex-start;
+                                                ul.submenu {
+                                                    margin: 0;
+                                                    padding: 0;
+                                                    width: 50%;
+                                                    &.style-one {
+                                                        padding-right: 30px;
+                                                    }
+                                                    li {
+                                                        list-style: none;
+                                                        display: block;
+                                                        border-bottom: none;
+                                                    }
+                                                    a {
+                                                        z-index: 9;
+                                                        &:hover {
+                                                            color: #000;
+                                                            font-weight: normal;
+                                                            text-decoration: none;
+                                                        }
+                                                        &::after, &::before {
+                                                            display: none;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        &:last-child {
+                                            border-bottom: none;
+                                        }
+                                    }
+                                    a {
+                                        font-size: 14px;
+                                        padding: 10px 0;
+                                        text-decoration: none;
+                                        display: flex;
+                                        position: relative;
+                                        justify-content: space-between;
+                                        @include transition($transition);
+                                        &:hover {
+                                            color: $theme-color;
+                                            font-weight: 500;
+                                            text-decoration: underline;
+                                            &::after {
+                                                background: $theme-color;
+                                                transform: scale(1.1);
+                                            }
+                                        }
+                                        span {
+                                            svg {
+                                                margin-right: 15px;
+                                            }
+                                        }
+                                        &::before, &::after {
+                                            @extend %absolute;
+                                            top: 1px;
+                                            left: -15px;
+                                            bottom: 0px;
+                                            width: 2px;
+                                            height: 100%;
+                                            -webkit-transition: all 0.3s ease-in-out;
+                                            -o-transition: all 0.3s ease-in-out;
+                                            transition: all 0.3s ease-in-out;
+                                        }
+                                        &::before {
+                                            background: #deded1ad;
+                                        }
+                                        &::after {
+                                            transform: scale(0);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .flex-menu {
+                    ul.menu-item {
+                        margin: 0;
+                        @extend %flex;
+                        justify-content: space-between;
+                        li {
+                            list-style: none;
+                            padding: 0 15px;
+                            &:last-child {
+                                padding-right: 0;
+                            }
+                        }
+                        a {
+                            font-size: 14px;
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+//#===== header area css ====#//

@@ -1,0 +1,219 @@
+body.rtl {
+    direction: rtl;
+}
+
+/*==== header top rtl css ====*/
+body.rtl header .header-part .header-top .top-item .item-left ul li {
+    padding-right: 0;
+    padding-left: 10px;
+}
+body.rtl header .header-part .header-top .top-item .item-left ul li a span svg {
+    margin-right: 0;
+    margin-left: 5px;
+}
+body.rtl header .header-part .header-top .top-item .item-left ul li:last-child {
+    padding-left: 0;
+}
+body.rtl header .header-part .header-top .top-item .item-right ul li {
+    padding-right: 0;
+    padding-left: 10px;
+}
+body.rtl header .header-part .header-top .top-item .item-right ul li:last-child {
+    padding-left: 0;
+}
+body.rtl header .header-part .header-top .top-item .item-right ul li a span svg {
+    margin-right: 0;
+    margin-left: 8px;
+}
+body.rtl header .header-part .header-top .top-item .item-right ul li a img {
+    margin-right: 0;
+    margin-left: 8px;
+}
+/*==== header top rtl css ====*/
+/*==== left side bar rtl css ===*/
+body.rtl header .header-part .header-midel .midel-item .header-logo a.before {
+    padding-right: 0;
+    padding-left: 20px;
+}
+body.rtl header .header-part .header-midel .midel-item .header-logo a.after {
+    margin-right: 10px;
+}
+body.rtl header .header-part .header-midel .midel-item .header-logo .header-left .side-menu .menu-bar a {
+    padding-left: 0;
+    padding-right: 0;
+}
+body.rtl header .header-part .header-midel .midel-item .header-logo .header-left .side-menu .menu-bar a svg {
+    margin-right: 5px;
+}
+body.rtl header .header-part .header-midel .midel-item .header-logo .header-left .side-menu .overlay.active {
+    right: 0;
+}
+body.rtl header .header-part .header-midel .midel-item .header-logo .header-left .side-menu .menu-items {
+    right: -300px;
+}
+body.rtl header .header-part .header-midel .midel-item .header-logo .header-left .side-menu .menu-items.active {
+    right: 0;
+    padding-left: 0;
+    padding-right: 20px;
+}
+body.rtl header .header-part .header-midel .midel-item .header-logo .header-left .side-menu .menu-items .items-inner .crose-bar {
+    left: 20px;
+    right: auto;
+}
+body.rtl header .header-part .header-midel .midel-item .header-logo .header-left .side-menu .menu-items .items-inner .menu-list  ul.list-item a.icon-down::before {
+    left: auto;
+    right: calc(100% + -30px);
+}
+body.rtl header .header-part .header-midel .midel-item .header-logo .header-left .side-menu .menu-items .items-inner .menu-list ul.list-item a.icon-down::after {
+    right: auto;
+    left: 9px;
+}
+body.rtl header .header-part .header-midel .midel-item .header-logo .header-left .side-menu .menu-items .items-inner .menu-list ul.list-item ul.m-submenu li::after, li::before {
+    right: 0;
+}
+body.rtl header .header-part .header-bottom .bottom-item .vertical-menu .drop-relative .drop-bg .list-menu ul.drop-list li .mega-menu::after {
+    right: 15%;
+    bottom: -22%;
+    width: 80%;
+    background-size: contain;
+    background-image: url(../../assets/images/header/02.png);
+}
+/*==== left side bar rtl css ===*/
+
+/*==== middle serarch bar css ====*/
+body.rtl header .header-part .header-midel .midel-item .search-bar .d-flex input {
+    border-radius: 0 20px 20px 0;
+}
+body.rtl header .header-part .header-midel .midel-item .search-bar .d-flex button {
+    border-radius: 20px 0 0 20px;
+}
+/*==== middle serarch bar css ====*/
+
+/*==== max icon rtl css ====*/
+body.rtl header .header-part .header-midel .midel-item .max-icon ul.icon-list li {
+    padding-right: 0;
+    padding-left: 25px;
+}
+body.rtl header .header-part .header-midel .midel-item .max-icon ul.icon-list li:last-child {
+    padding-left: 0;
+}
+body.rtl header .header-part .header-midel .midel-item .max-icon .overlays.active  {
+    left: 0;
+}
+body.rtl header .header-part .header-midel .midel-item .max-icon .notification {
+    left: -300px;
+    right: auto;
+}
+body.rtl header .header-part .header-midel .midel-item .max-icon .notification.active {
+    left: 0;
+    right: auto;
+}
+body.rtl header .header-part .header-midel .midel-item .max-icon .notification .cross-bar span.close-mobile {
+    padding-right: 15px;
+    padding-left: 0;
+}
+body.rtl header .header-part .header-midel .midel-item .max-icon .notification ul.notif-list li .notif-item {
+    margin-left: 0;
+    margin-right: 20px;
+    padding: 10px 10px 10px 0;
+}
+body.rtl header .header-part .header-midel .midel-item .max-icon .notification ul.notif-list li .notif-item .item-text button {
+    float: left;
+} 
+body.rtl header .header-part .header-midel .midel-item .max-icon .notification ul.notif-list li .notif-item .item-footer button span {
+    right: 0;
+    left: auto;
+}
+body.rtl header .header-part .header-midel .midel-item .max-icon .notification ul.notif-list li .notif-item .item-footer button:hover span {
+   right: -50%;
+   transform: translateX(50%);
+}
+body.rtl header .header-part .header-midel .midel-item .max-icon .notification .appbar-footer ul.foot-item li a span img {
+    margin-left: 10px;
+}
+/*==== max icon rtl css ====*/
+
+/*==== header bottom rtl css ====*/
+body.rtl header .header-part .header-bottom .bottom-item .vertical-menu button span svg {
+    margin-right: 0;
+    margin-left: 10px;
+}
+body.rtl header .header-part .header-bottom .bottom-item .vertical-menu .drop-relative .drop-bg .list-menu ul.drop-list {
+    padding-right: 15px;
+    padding-left: 0;
+}
+body.rtl header .header-part .header-bottom .bottom-item .vertical-menu .drop-relative .drop-bg .list-menu ul.drop-list a::before,::after {
+    right: -15px;
+}
+body.rtl header .header-part .header-bottom .bottom-item .vertical-menu .drop-relative .drop-bg .list-menu ul.drop-list a span svg {
+    transform: rotate(-180deg);
+    margin-right: 0;
+    margin-left: 5px;
+}
+body.rtl header .header-part .header-bottom .bottom-item .vertical-menu .drop-relative .drop-bg .list-menu ul.drop-list li .mega-menu {
+    right: 100%;
+}
+body.rtl header .header-part .header-bottom .bottom-item .vertical-menu .drop-relative .drop-bg .list-menu ul.drop-list li .mega-menu .menu-inner .submenu span {
+    display: flex;
+}
+/*==== header bottom rtl css ====*/
+
+ 
+/* ==== banner area rtl css ==== */
+body.rtl .banner-area .banner-slider .swiper-pagination {
+    z-index: 1;
+}
+/* ==== banner area rtl css ==== */
+
+/* ==== check box rtl css ==== */
+body.rtl .check-box .box-item .item-content .check-thumb {
+    margin-right: 0;
+    margin-left: 15px;
+}
+/* ==== check box rtl css ==== */
+
+/* ==== product tab rtl css ==== */
+body.rtl .product-tab .section-wrapper .tab-content .post-content .content-bottom .col-sm-4.col-12:nth-child(1)::after {
+    right: 5px;
+    border-radius: 20px 0 0 20px;
+} 
+body.rtl .product-tab .section-wrapper .tab-content .post-content .content-bottom .col-sm-4.col-12:nth-child(3)::after {
+    right: 5px;
+    border-radius: 20px 0 0 20px;
+} 
+/* ==== product tab rtl css ==== */
+
+/* ==== features rtl css ==== */
+body.rtl .flex-header h4 {
+    padding-right: 0;
+    padding-left: 20px;
+}
+body.rtl .feature-area .another-item button span svg {
+    margin-right: 0;
+    margin-left: 10px;
+}
+/* ==== features rtl css ==== */
+
+/* ===== trending product rtl css ===== */
+body.rtl .arrow .prev {
+    left: 0;
+    right: auto;
+}
+body.rtl .arrow .next {
+    left: 40px;
+    right: auto;
+}
+/* ===== trending product rtl css ===== */
+
+/* ===== footer rtl css  ==== */
+body.rtl footer .contact-list ul li span svg{
+    margin-right: 0;
+    margin-left: 10px;
+}
+body.rtl footer .subscribe form input {
+    border-radius: 0 20px 20px 0;
+}
+body.rtl footer .subscribe form  button.button {
+    border-radius: 20px 0 0 20px;
+}
+/* ===== footer rtl css  ==== */

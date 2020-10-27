@@ -1,0 +1,805 @@
+/*!
+<----------------------------------------
+  Theme Name:  Our Shope
+  Theme URI: http://info-Inlet.net
+  Author: info-Inlet.net
+  Author URI: http://info-Inlet.net
+  Description: Our Shope is a Creative HTML5 Template for Saas, Startup & Agency.
+  Version: 1.0.0
+  Tags: app, app landing page, app showcase template, application services, gradient color, landing, marketing, responsive template, seo, software, Software Services, startup, tech, web application landing page.
+---------------------------------------->
+*/
+/*
+>>> TABLE OF CONTENTS:
+<----------------------------------------------------------------
+    01. Default CSS
+	02. Header 
+	03. Banner
+         (a)Style-one
+	04. Page Header
+	05. Service-area
+	06. Product
+    07. Product details
+	08. User-profile
+	09. Portfolio-area
+	     (a)style-1
+	     (b)style-2
+	11. check-box
+	12. Trendig-slider
+	13. Features-area
+	14. Product-tab
+	15. payment-area
+    16. offered-product
+    17. popular-products
+    18. shoping-cart
+    19. popular-keyword
+	20. login
+        (a)style-one
+        (b)style-two
+	21. Faq
+	22. Privacy & policy
+    23. Trms & conditions
+    24. 404 page
+	25. Footer
+---------------------------------------------------------------->
+
+
+/*--------------------------------------------------------------
+Typography
+--------------------------------------------------------------*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+}
+body,
+button,
+input,
+select,
+textarea {
+	color: $desc-color;
+	font-family: $roboto;
+	font-size: 1rem;
+    font-weight: 400;
+	outline: none;
+    border: none;
+    position: relative;
+	background: $bg;
+}
+h1 {
+	font-size: $fs-h2;
+}
+h2 {
+	font-size: 30px;
+}
+h3 {
+	font-size: 24px;
+}
+h4 {
+	font-size: $fs-h4;
+}
+h5 {
+ 	font-size: $fs-h5;
+}
+h6 {
+	font-size: $fs-h6;
+}
+h1, h2, h3, h4, h5, h6 {
+	color: $title-color;
+	font-weight: 500;
+	font-family: $roboto;
+    line-height: 1.5;
+    text-transform: capitalize;
+}
+h1>a, h2>a, h3>a, h4>a, h5>a, h6>a {
+	color: inherit;
+	font-size: inherit;
+	font-weight: 500;
+	font-family: $roboto;
+}
+
+@media screen and (min-width: 576px) {
+	h1 {
+	    font-size: $fs-h1;
+	}
+	h2 {
+	    font-size: $fs-h2;
+	}
+	h3 {
+	    font-size: $fs-h3;
+	}
+	h4 {
+	    font-size: $fs-h4;
+	}
+	h5 {
+	    font-size: $fs-h5;
+	}
+	h6 {
+	    font-size: $fs-h6;
+	}
+}
+
+p {
+	font-size: $fs-base;
+	margin: 0 0 15px;
+	color: $desc-color;
+	line-height: 1.5;
+	font-family: $roboto;
+}
+
+a {
+	color: $desc-color;
+	text-decoration: none;
+	display: inline-block;
+	outline: none;
+    @include transition($transition);
+    &:hover {
+        text-decoration: none;
+    }
+}
+a:focus {
+	outline: none;
+}
+a:hover,
+a:active {
+	color: #000;
+	outline: 0;
+}
+img,
+video {
+	height: auto;
+	max-width: 100%;
+	@include transition($transition);
+}
+
+/* Placeholder text color -- selectors need to be separate to work. */
+::-webkit-input-placeholder {
+	color: $desc-color;
+	font-family: $roboto;
+}
+:-moz-placeholder {
+	color: $desc-color;
+	font-family: $roboto;
+}
+::-moz-placeholder {
+	color: $desc-color;
+	font-family: $roboto;
+	opacity: 1;
+}
+:-ms-input-placeholder {
+	color: $desc-color;
+	font-family: $roboto;
+}
+
+
+/*-- all custom btn css --*/
+button {
+    &.custom-btn{
+        padding: 10px;
+        margin-top: 30px;
+        cursor: pointer;
+        text-transform: uppercase;
+        position: relative;
+        &:hover {
+            color: $white-color;
+            span {
+                color: $white-color
+            }
+            &::before {
+                width: 100%;
+                left: 0;
+                right: auto;
+            }
+        }
+        &::before {
+            @extend %absolute;
+            width: 0;
+            height: 100%;
+            background: $theme-color;
+            top: 0;
+            bottom: 0;
+            left: auto;
+            right: 0;
+            -webkit-transition: all 0.2s linear;
+            -o-transition: all 0.2s linear;
+            transition: all 0.2s linear;
+        }
+        span {
+            color: #000;
+            padding-bottom: 0;
+            position: relative;
+            z-index: 9;
+            img {
+                margin-top: -3px;
+            }
+        }
+    }
+}
+
+a {
+    &.ex-btn{
+        margin-top: 30px;
+        cursor: pointer;
+        padding: 10px 20px;
+        text-transform: uppercase;
+        text-decoration: none;
+        display: inline-block;
+        position: relative;
+        display: inline-flex;
+        border-radius: 3px;
+        align-items: unset;
+        background: $theme-color;
+        &:hover {
+            color: $white-color;
+            span {
+                color: $white-color;
+            }
+            &::before {
+                width: 100%;
+                left: 0;
+                right: auto;
+            }
+        }
+        &::before {
+            @extend %absolute;
+            width: 0;
+            height: 100%;
+            background-color: #000;
+            opacity: 0.9;
+            top: 0;
+            bottom: 0;
+            left: auto;
+            right: 0;
+            border-radius: 3px;
+            -webkit-transition: all 0.2s linear;
+            -o-transition: all 0.2s linear;
+            transition: all 0.2s linear;
+        }
+        span {
+            color: $white-color;
+            padding-bottom: 0;
+            position: relative;
+            z-index: 9;
+            img {
+                margin-top: -3px;
+            }
+            svg {
+                margin-right: 5px;
+            }
+        }
+    }
+}
+/*-- all custom btn css --*/
+
+/*--- section header css --*/
+.section-header {
+    h4 {
+        margin: 0;
+        font-size: 22px;
+        color: #646464;
+        padding-bottom: 20px;
+    }
+}
+.flex-header {
+    @extend %flex;
+    align-items: center;
+    padding-bottom: 20px;
+    h4 {
+        margin: 0;
+        padding-right: 20px;
+        color: #646464;
+        @include breakpoint (max-sm) {
+            font-size: 18px;
+        }
+    }
+    a {
+        font-size: 12px;
+        text-decoration: none;
+        color: $theme-color;
+    }
+}
+
+/*------ common slider arrow css start -------*/
+.arrow {
+    .next, .prev {
+       position: absolute;
+       top: -50px;
+       z-index: 9;
+       text-align: center;
+       cursor: pointer;
+       &:hover {
+           span {
+               background: $theme-color;
+               svg {
+                   path {
+                       fill: $white-color;
+                   }
+               }
+           }
+       }
+       &.swiper-button-disabled {
+           cursor: no-drop;
+           span {
+               background: #cc1010;
+               svg {
+                   path {
+                       fill: #333;
+                   }
+               }
+           }
+       }
+       span {
+           height: 32px;
+           width: 32px;
+           line-height: 32px;
+           background: #e1e1e1;
+           display: inline-block;
+           @include transition ($transition);
+       }
+   }
+   .next {
+       right: 0;
+   }
+   .prev {
+       right: 40px;
+   }
+}
+/*------ common slider arrow css ends -------*/
+
+/*==== common item css start =====*/
+.post-item {
+    padding: 10px;
+    overflow: hidden;
+    position: relative;
+    @include transition ($transition);
+    &:hover {
+        border: 1px solid $border-color;
+        @extend %shadow;
+        -o-transform: scale(1.1);
+        -moz-transform: scale(1.1);
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+        .post-thumb {
+            img {
+                -o-transform: scale(1.1);
+                -moz-transform: scale(1.1);
+                -webkit-transform: scale(1.1);
+                transform: scale(1.1);
+            }
+            .post-wish {
+                transform: scale3d(1.1);
+                right: 0;
+            }
+            .post-cart {
+                opacity: 1;
+                bottom: 10px;
+            }
+        }
+        .post-text {
+            h6 {
+                a {
+                    color: $theme-color;
+                }
+            }
+        }
+        &::after {
+            -webkit-animation: collection 1s;
+            animation: collection 1s;
+        }
+    }
+    &::after {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: 2;
+        display: block;
+        content: '';
+        width: 0;
+        height: 0;
+        background: rgba(255,255,255,0.2);
+        border-radius: 100%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        opacity: 0;
+    }
+    .post-thumb {
+        overflow: hidden;
+        position: relative;
+        img {
+            width: 100%;
+            @include transition ($transition);
+        }
+        .post-wish {
+            position: absolute;
+            top: 0;
+            right: -50px;
+            transform: scale3d(0);
+            @include transition ($transition);
+            button {
+                height: 40px;
+                width: 40px;
+                line-height: 40px;
+                cursor: pointer;
+                border-radius: 0 0 0 5px;
+                &.active {
+                    background-color: $theme-color!important;
+                    span {
+                        svg {
+                            g {
+                                path {
+                                    fill: $white-color;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .post-cart {
+            position: absolute;
+            bottom: -38px;
+            opacity: 0;
+            width: 100%;
+            text-align: center;
+            @include transition ($transition);
+            button {
+                padding: 10px 15px;
+                display: inline-flex;
+                background: transparent;
+                &.custom-btn {
+                    background: $theme-color;
+                    border-radius: 20px;
+                    &::before {
+                        border-radius: 20px;
+                        background: #000;
+                    }
+                    span {
+                        color: $white-color;
+                        font-size: 12px;
+                        svg {
+                            margin-right: 8px;
+                        }
+                    }
+                }
+            }
+            
+        }
+    }
+    .post-text {
+        .rating {
+            span {
+                padding-top: 10px;
+                padding-right: 3px;
+                display: inline-block;
+            }
+        }
+        h6 {
+            margin: 0;
+            padding: 5px;
+            font-size: 13px;
+            @include breakpoint (xxl) {
+                font-size: 16px;
+            }
+            a {
+                text-decoration: none;
+                transition: all 0.3s ease-in-out;
+            }
+        }
+        p {
+            margin: 0;
+            color: #000;
+            font-size: 16px;
+            font-weight: 700;
+        }
+    }
+}
+/*==== common item css ends  =====*/
+
+//#=== all input icon css ===#//
+input {
+    position: relative;
+    padding-right: 30px!important;
+}
+
+.input-icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+}
+
+//#=== all input icon css ===#//
+
+//? metro css color change 
+.rating .stars li.on {
+    color: #F8DA48 !important;
+}
+.slider .complete {
+    background-color: $theme-color !important;
+}
+.slider .hint {
+    background-color: $theme-color!important;
+}
+.switch .check::after {
+    border-color: #F8DA48!important;
+    background: $theme-color!important;
+}
+.switch .check {
+    border-color: $theme-color!important;
+}
+.switch input[type=checkbox]:checked~.check {
+    background-color: $theme-color!important;
+}
+.switch input[type=checkbox]:checked~.check::after {
+    background-color: $white-color!important;
+}
+
+.checkbox input[type=checkbox]:checked~.check {
+    background-color: $theme-color !important;
+}
+
+.rating .stars li::before {
+    font-size: 18px;
+}
+
+[class*=default-icon] {
+    height: 10px;
+    width: 10px;
+}
+.spinner {
+    height: 42px;
+    border: none;
+    input {
+        padding: 0;
+        font-size: 12px;
+        margin: 0 20px;
+        text-align: center!important;
+        padding-right: 0!important;
+        background: #f8f8f8;
+    }
+    .button {
+        height: 40px;
+        border-radius: 100%;
+    }
+}
+
+//? mentro css color change
+
+
+/*----- all pricing plan content css -----*/
+
+/*----- all pricing plan content css -----*/
+.pl-lg-20 {
+    @include breakpoint(lg) {
+        padding-left: 30px;
+    }
+}
+.pr-lg-20 {
+    @include breakpoint(lg) {
+        padding-right: 30px;
+    }
+}
+
+/*======= all scrollbar css =====*/
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 8px;
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: $theme-color;
+    border-radius: 8px;
+}
+/*======= all scrollbar css =====*/
+
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes preloader-fx {
+    0% {
+        -webkit-transform: scale(0, 0);
+        transform: scale(0, 0);
+        opacity: 0.5;
+    }
+
+    100% {
+        -webkit-transform: scale(1, 1);
+        transform: scale(1, 1);
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes preloader-fx {
+    0% {
+        -webkit-transform: scale(0, 0);
+        opacity: 0.5;
+    }
+
+    100% {
+        -webkit-transform: scale(1, 1);
+        opacity: 0;
+    }
+}
+
+.wow {
+    -webkit-animation-name: none !important;
+    -moz-animation-name: none !important;
+    animation-name: none !important;
+    visibility: visible !important;
+}
+
+
+
+// extend part start here
+%flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+%position {
+    position: absolute;
+    content: "";
+}
+
+%image-link {
+    a {
+        display: block;
+        img {
+            display: block;
+            margin: auto;
+        }
+    }
+}
+
+// global popover
+.popover {
+    padding: 2px !important;
+    min-width: 5rem !important;
+    text-align: center;
+    border-color: $theme-color;
+    &::before {
+        height: 10px;
+        width: 10px;
+    }
+    .popover-content {
+       font-size: 12px;
+    }
+}
+
+
+// common social media
+.facebook {
+    background: $facebook;
+    &:hover {
+        background: $white-color;
+        border-color: $facebook !important;
+        i {
+            color: $facebook !important;
+        }
+    }
+}
+.twitter {
+    background: $twitter;
+    border-color: $twitter !important;
+    &:hover {
+        background: $white-color;
+        i {
+            color: $twitter !important;
+        }
+    }
+}
+.twitter-sm {
+    background: $twitter;
+    &:hover {
+        background: $white-color;
+        border-color: $twitter;
+        i {
+            color: $twitter !important;
+        }
+    }
+}
+.google {
+    background: $google;
+    &:hover {
+        background: $white-color;
+        border-color: $google !important;
+        i {
+            color: $google !important;
+        }
+    }
+}
+.linkedin {
+    background: $linkedin;
+    &:hover {
+        background: $white-color;
+        border-color: $linkedin !important;
+        i {
+            color: $linkedin !important;
+        }
+    }
+}
+.instagram {
+    background: $instagram;
+    &:hover {
+        background: $white-color;
+        border-color: $instagram !important;
+        i {
+            color: $instagram !important;
+        }
+    }
+}
+.tumblr {
+    background: $tumblr;
+    &:hover {
+        background: $white-color;
+        border-color: $tumblr !important;
+        i {
+            color: $tumblr !important;
+        }
+    }
+}
+.behance {
+    background: $behance;
+    &:hover {
+        background: $white-color;
+        border-color: $behance !important;
+        i {
+            color: $behance !important;
+        }
+    }
+}
+.youtube {
+    background: $youtube;
+    &:hover {
+        background: $white-color;
+        border-color: $youtube !important;
+        i {
+            color: $youtube !important;
+        }
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .wow {
+        animation-name: none !important;
+        visibility: visible !important;
+    }
+}
+
+%flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+%absolute {
+    position: absolute;
+    content: '';
+}
+
+
+%shadow {
+    -webkit-box-shadow: 0 0 10px 0 rgba(136, 136, 136, 0.1);
+    box-shadow: 0 0 10px 0 rgba(136, 136, 136, 0.1);
+}
+
+
+%border {
+    border: 10px solid #e2e2e2;
+}
+[class*=cell-], [class*=col-] {
+    padding: 10px;
+}
+
+@-webkit-keyframes collection{
+    0%{opacity:1}
+    40%{opacity:1}
+    100%{width:200%;height:200%;opacity:0}}
+
+@keyframes collection{
+    0%{opacity:1}
+    40%{opacity:1}
+    100%{width:200%;height:200%;opacity:0}}
